@@ -34,6 +34,7 @@ const carta = (card) => {
     console.log(clicked)
     if (clicked.classList.contains("cardContent")) {
       clicked.classList.add("cardShow")
+      clicked.classList.remove("remove")
     }
 
     if (firstSelection === 0) {
@@ -43,9 +44,17 @@ const carta = (card) => {
       if (firstSelection === secondSelection) {
         console.log("iguales")
       } else {
-      
+        setTimeout(function(){ clicked.classList.add("remove"); }, 1000);
+        const id= firstSelection;
+        const first = document.querySelectorAll(`[data-id="${id}"]` );
+       setTimeout(function(){ 
+        first.forEach((card)=> {
+          card.classList.add("remove")})
+         },1000)
+         
+        console.log(firts) 
         console.log("no iguales")
-
+     console.log("1", firstSelection)
       }
       firstSelection = 0
       secondSelection = 0

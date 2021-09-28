@@ -112,8 +112,8 @@ h3 {
 }
 
 
-.selected {
-  border: 1px solid rgb(72, 255, 0);
+.remove{
+  transform: rotateY(0)
 }
 .match {
   border: 4px solid red;}
